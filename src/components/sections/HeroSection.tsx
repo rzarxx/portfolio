@@ -25,7 +25,7 @@ export function HeroSection() {
         
         <div className="mb-2">
           <BlurText 
-            text="Your Name" 
+            text="Reza Kusuma" 
             className="text-4xl md:text-6xl font-bold tracking-tight text-foreground"
             delay={50}
             animateBy="words"
@@ -34,8 +34,8 @@ export function HeroSection() {
         </div>
 
         <div className="mb-8 relative w-full h-24 md:h-32 flex items-center justify-center">
-          <GlitchText speed={0.5} enableShadows={true} className="text-cyan-primary text-2xl md:text-5xl uppercase tracking-[0.2em]">
-            Creative Developer
+          <GlitchText speed={0.5} enableShadows={true} className="text-cyan-primary text-2xl md:text-4xl uppercase tracking-[0.2em]">
+            Full-Stack Developer
           </GlitchText>
         </div>
 
