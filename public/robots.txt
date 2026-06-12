@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://hirezakusuma.net
+
+# Sitemaps
+Sitemap: https://hirezakusuma.net/sitemap.xml
