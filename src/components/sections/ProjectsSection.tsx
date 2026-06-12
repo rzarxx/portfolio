@@ -2,28 +2,8 @@
 
 import TiltedCard from "@/components/animations/TiltedCard";
 import SpotlightCard from "@/components/animations/SpotlightCard";
-import GlitchText from "@/components/animations/GlitchText";
-
-const dummyProjects = [
-  {
-    id: 1,
-    title: "Project Alpha",
-    description: "A cyberpunk-themed web application.",
-    image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop",
-  },
-  {
-    id: 2,
-    title: "Project Beta",
-    description: "Interactive 3D data visualization dashboard.",
-    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop",
-  },
-  {
-    id: 3,
-    title: "Project Gamma",
-    description: "Experimental UI with WebGL components.",
-    image: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=2070&auto=format&fit=crop",
-  }
-];
+import Link from "next/link";
+import { projectsData } from "@/lib/data";
 
 export function ProjectsSection() {
   return (
@@ -37,7 +17,7 @@ export function ProjectsSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {dummyProjects.map((project) => (
+          {projectsData.map((project) => (
             <SpotlightCard 
               key={project.id} 
               className="p-4 flex flex-col items-center justify-center group" 
@@ -63,11 +43,11 @@ export function ProjectsSection() {
                 />
               </div>
               <h3 className="text-2xl font-bold text-white mb-2">{project.title}</h3>
-              <p className="text-dim-text text-center text-sm">{project.description}</p>
+              <p className="text-dim-text text-center text-sm line-clamp-2">{project.description}</p>
               
-              <button className="mt-6 px-6 py-2 border border-white/10 hover:border-cyan-primary text-sm tracking-widest text-white/70 hover:text-cyan-primary uppercase rounded-full transition-all">
+              <Link href={`/projects/${project.slug}`} className="mt-6 px-6 py-2 border border-white/10 hover:border-cyan-primary text-sm tracking-widest text-white/70 hover:text-cyan-primary uppercase rounded-full transition-all">
                 View Details
-              </button>
+              </Link>
             </SpotlightCard>
           ))}
         </div>
