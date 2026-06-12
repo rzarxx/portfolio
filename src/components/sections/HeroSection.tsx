@@ -39,11 +39,20 @@ export function HeroSection() {
           </GlitchText>
         </div>
 
-        <Magnet padding={50} disabled={false} magnetStrength={3}>
-          <button className="px-8 py-3 mt-4 glass text-white font-medium tracking-wide rounded-full border border-cyan-primary/30 hover:border-cyan-primary transition-colors hover:shadow-[0_0_15px_rgba(0,240,255,0.4)]">
-            Explore My Work
-          </button>
-        </Magnet>
+        <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
+          <Magnet padding={30} disabled={false} magnetStrength={2}>
+            <a href="#projects" className="px-8 py-3 glass text-white font-bold tracking-wide rounded-full border border-cyan-primary/30 hover:border-cyan-primary hover:bg-cyan-primary/10 transition-colors hover:shadow-[0_0_15px_rgba(0,240,255,0.4)]">
+              Explore My Work
+            </a>
+          </Magnet>
+          
+          <Magnet padding={30} disabled={false} magnetStrength={2}>
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="px-8 py-3 bg-white text-background font-bold tracking-wide rounded-full border border-white hover:bg-gray-200 transition-colors flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              Download CV
+            </a>
+          </Magnet>
+        </div>
       </div>
 
       <ScrollIndicator />

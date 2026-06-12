@@ -6,14 +6,26 @@ import ScrollVelocity from "@/components/animations/ScrollVelocity";
 export function AboutSection() {
   return (
     <section id="about" className="relative w-full py-24 bg-background flex flex-col items-center justify-center border-t border-white/5">
-      <div className="max-w-4xl px-4 md:px-8 mb-24 text-center">
+      <div className="max-w-4xl mx-auto px-4 md:px-8 mb-24 flex flex-col items-center text-center">
+        
+        <ScrollReveal baseOpacity={0} blurStrength={4} containerClassName="mb-8">
+          <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-2 border-cyan-primary/50 shadow-[0_0_30px_rgba(0,212,255,0.2)]">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img 
+              src="https://i.pravatar.cc/300?u=rezakusuma" 
+              alt="Reza Kusuma" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </ScrollReveal>
+
         <ScrollReveal
           enableBlur={true}
           baseOpacity={0}
           baseRotation={5}
           blurStrength={10}
           containerClassName="mb-12"
-          textClassName="text-dim-text"
+          textClassName="text-dim-text text-lg md:text-xl leading-relaxed max-w-2xl"
         >
           I am a creative developer specializing in building immersive digital experiences. 
           With a strong foundation in frontend technologies and a passion for cyberpunk aesthetics, 
